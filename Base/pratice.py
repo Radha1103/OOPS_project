@@ -17,10 +17,9 @@ def select():
 
 
 
-'''driver.find_element(By.XPATH,"(//*[text()='Register'])[2]").click()
-driver.find_element(By.ID,"input-username").send_keys("RK")
-driver.find_element(By.ID,"input-firstname").send_keys("Radhika")
-driver.find_element(By.ID,"input-lastname").send_keys("Kavishwar")
-driver.find_element(By.ID,"input-email").send_keys("abc@gmail.com")
-driver.find_element(By.NAME,"password").send_keys("abc123")
-driver.find_element(By.XPATH,"//button[text()='Register']")'''
+def title():
+    driver = webdriver.Edge()
+    driver.implicitly_wait(30)
+    driver.get("https://demo.opencart.com/")
+    return (driver.title)
+
