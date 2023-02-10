@@ -29,8 +29,8 @@ class ShoppingCart:
         self.driver.find_element(By.PARTIAL_LINK_TEXT, "Samsung SyncMaster 941BW").click()
         self.driver.find_element(By.ID, "input-quantity").send_keys("2")
         self.driver.find_element(By.ID, "button-cart").click()
-        expec = self.driver.find_element(By.XPATH, "//h1[contains(text(),'Samsung SyncMast')]").text
-        return (expec)
+        self.driver.find_element(By.XPATH, "//h1[contains(text(),'Samsung SyncMast')]").text
+
 
 
     def register(self):
@@ -72,7 +72,7 @@ while True:
     print("Enter 2 for another item function")
     print("Enter 3 for register function")
     print("Enter 4 for exit ")
-    userchoice = 1
+    userchoice =int(input())
     if userchoice == 1:
         opencart.add_to_cart()
     elif userchoice == 2:
